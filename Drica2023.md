@@ -22,7 +22,7 @@ Olá!!!
 ![AI-900](https://img.shields.io/badge/AI900-green)
 #
 ## 🔗 Rede Sociais
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-357?style=for-the-badge&logo=linkedin&logoColor=ffff)](https://)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-357?style=for-the-badge&logo=linkedin&logoColor=ffff)](https://www.linkedin.com/in/adriana-medeiros-ti)
 
 [![Github](https://img.shields.io/badge/Github-357?style=for-the-badge&logo=Github&logoColor=fffff)](https://github.com/Drica2023)
 

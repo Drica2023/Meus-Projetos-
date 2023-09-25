@@ -1,0 +1,49 @@
+body {
+background-color: #FFA07A;	
+	
+}
+
+
+
+div#topo{
+background:#FFA07A;
+width: 996px;
+height: 152px;
+margin: 0 auto;
+}
+
+
+
+.link{
+	font-family:arial;
+	font-size: 14px;
+	text-align:center;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+	display:block;
+	
+}
+.link-colortext{
+	color:#fff;
+	
+
+	
+}
+.btn-border:hover{
+	background:#6F1A52;
+	
+	
+}
+
+.btn-border{
+	background: #930B0B;
+	border-radius: 20px;
+	padding:10px 10px;
+	padding-bottom:5px;
+	padding-top:inherit;
+	margin-top:35px;
+	margin-right:25px;
+	margin-left:25px;
+	margin-bottom:35px;
+}

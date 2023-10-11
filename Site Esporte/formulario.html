@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulario</title>
+
+
+<meta charset="UTF-8">
+<meta charset="><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="_css\estilo.css">
+<script src="_jscript\script.js"></script>
+
+
+</head>
+
+<body>
+
+<form>
+	<h1> Para participar dessa promoção necessario ser assinante!!!!</h1>
+	<button><a href="cadastroAssinante.html">Não sou assinante</a></button>
+<h1>Preencha seu cadastro:</h1>
+<br />
+<br />
+Nome:<input id="name" type="text" maxlength="80" placeholder="Nome" completo" size=80>
+<br />
+<br />
+Apelido:<input id="nickname" type="text" maxlength="20" placeholder="Apelido" size=20>
+<br />
+<br />
+Data de nascimento:
+
+<input id="date" type="date" name="f-date" min="1900-01-01" max="2003-09-15" required>
+
+
+
+<br />
+<br />
+
+  CPF:
+      <input id="cpf" type="text" placeholder="000.000.000-00" maxlength="14" size=14>
+<br />
+<br />
+
+
+    Time do coração:
+      <select id="team_id" maxlength="20">
+      <option id="0">Escolha</option>
+      <option id="1">Atletico Mineiro</option>
+      <option id="2">Chapecoense</option>
+      <option id="3">Corinthians</option>
+      <option id="4">Flamengo</option> 
+      <option id="5">Fluminense</option>
+      <option id="6">Internacional</option> 
+      <option id="7">Grêmio</option>  
+      <option id="8">Palmeiras</option> 
+      <option id="9">Santos</option> 
+      <option id="10">São Paulo</option>
+      <option id="100">Outros</option>
+      </select>
+      <br>
+      <br>
+
+    Esportes de interesse:<br>
+     <input type="checkbox" name="sport" id="1">Futebol<br>
+     <input type="checkbox" name="sport" id="2">Vôlei<br>
+     <input type="checkbox" name="sport" id="3">Basquete<br>
+     <input type="checkbox" name="sport" id="4">Futsal<br>
+     <input type="checkbox" name="sport" id="5">Automobilismo<br>
+     <input type="checkbox" name="sport" id="6">Artes Marciais<br>
+     <input type="checkbox" name="sport" id="7">Natação<br>
+<br>
+<br>
+	<!--Importando Script Jquery-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+	<!--Formulário busca endereço pelo CEP-->
+<form>
+		<label for="cep">CEP</label>
+		<input id="cep" type="text" placeholder="ex. 99999010" required/>
+		<label for="logradouro">Logradouro</label>
+		<input id="logradouro" type="text" placeholder="Rua/Av./Estr./rod" required/>
+		<label for="numero">Número</label>
+		<input id="numero" type="text" placeholder="casa/apto." size=6  />
+		<label for="complemento">Complemento</label>
+		<input id="complemento" type="text" placeholder="Predio/bloco"/>
+		<br />
+		<br />
+		<label for="bairro">Bairro</label>
+		<input id="bairro" type="text" placeholder="bairro"required/>
+		<label for="uf">Estado</label>
+		<select id="uf">
+			<option value="AC">Acre</option>
+			<option value="AL">Alagoas</option>
+			<option value="AP">Amapá</option>
+			<option value="AM">Amazonas</option>
+			<option value="BA">Bahia</option>
+			<option value="CE">Ceará</option>
+			<option value="DF">Distrito Federal</option>
+			<option value="ES">Espírito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">Roraima</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select>
+		
+<br>
+<br>  
+    
+    <input type="button"  onclick="Enviar()" value="enviar" >
+<br>
+<br> 
+<br>
+<br>     
+     <input type="reset">
+<br>
+<br>
+		
+</form>
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+		$("#cep").focusout(function(){
+			//Início do Comando AJAX
+			$.ajax({
+				//O campo URL diz o caminho de onde virá os dados
+				//É importante concatenar o valor digitado no CEP
+				url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/unicode/',
+				//Aqui você deve preencher o tipo de dados que será lido,
+				//no caso, estamos lendo JSON.
+				dataType: 'json',
+				//SUCESS é referente a função que será executada caso
+				//ele consiga ler a fonte de dados com sucesso.
+				//O parâmetro dentro da função se refere ao nome da variável
+				//que você vai dar para ler esse objeto.
+				success: function(resposta){
+					//Agora basta definir os valores que você deseja preencher
+					//automaticamente nos campos acima.
+					$("#logradouro").val(resposta.logradouro);
+					$("#complemento").val(resposta.complemento);
+					$("#bairro").val(resposta.bairro);
+					$("#cidade").val(resposta.localidade);
+					$("#uf").val(resposta.uf);
+					//Vamos incluir para que o Número seja focado automaticamente
+					//melhorando a experiência do usuário
+					$("#numero").focus();
+				}
+			});
+		});
+	</script>
+
+
+
+<footer>
+Promoção válida ate 15 de setembro de 2021. Consulte o regulamento. 
+
+<footer>
+</body>
+</html>
+
+</body>
+</html>

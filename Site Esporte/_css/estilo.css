@@ -1,0 +1,88 @@
+
+body{
+ background-image: url("../_imagens/gramado.png");
+
+ }
+
+header{
+	background-color: #8FBC8F;
+	border: 15px solid #108b10;
+	padding: 10px 40px;
+	margin: 0% 20% 5% 20%;
+	text-align: center;
+	
+}
+#acordeon{
+	font-size: 14px; width:200px;
+}
+
+label, input{
+	padding:0px 10px;
+
+}
+
+
+p{
+	color: white;
+	text-align: right;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: larger;
+	
+}
+
+h1 {
+color: white;
+font-family:arial;
+font-size: 35px;
+text-align: center;
+}
+
+.button {
+	background: #006400;
+	border-radius: 20px;
+	padding:16px 32px;
+	margin:4px 20px;
+	font-family:arial;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	border-color: #32CD32;
+	
+}
+
+
+.button:hover {
+  background-color: #ADFF2F;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inherit-block;
+  margin:4px 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+form{
+	background-color: #8FBC8F ;
+	border-radius: 15px ;
+	opacity: 90%;
+	padding: 20px 40px;
+	margin: 5% 20% 5% 20%;
+	text-align: justify;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: bold;
+
+}
+
+
+footer{
+	
+background: green;	
+color:white;
+text-align: center;	
+}
+

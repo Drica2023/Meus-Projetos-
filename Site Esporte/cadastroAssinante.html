@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_css/estilo.css">
+<script src="_jscript/valida_form.js"></script>
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css " rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<!--Construção do efeito ACCORDION (ACORDEON) do JQUERY UI-->
+<script>
+  $(function() {
+    $( "#acordeon" ).accordion({
+        active: false, 
+        collapsible: true
+    });
+  });
+
+</script>
+</head>
+
+
+
+<body>
+<p id="data"></p>  <input type="text" id="datahoje" enable >
+<header>
+  
+  <p id="tempo"</p>
+
+
+  <h1 > Cadastro de Assinantes - Canais de Esporte </h1>
+   
+  <script>
+   var d = new Date();
+  document.getElementById("datahoje").value = d;
+  
+  
+  
+  setInterval(contartempo, 1000);
+  
+  
+  var contador=1;
+  function contartempo(){ 
+    document.getElementById("tempo").innerHTML = contador;
+    contador++;
+  }
+     </script> 
+</header>  
+<main>
+<form id="form" name="form" onsubmit="verify_form();">
+  <label for="nome">Nome:</label>
+  <input type="text" name="nome" id="name" autocomplete="off" required size=40>
+
+  <label for="cpf">CPF:</label>
+  <input type="text" name="cpf" id="cpf" autocomplete="off" required ><br /><br />
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email" autocomplete="off">
+
+  <label for="tel">Celular:</label>
+  <input type="tel" name="cel" id="cel" autocomplete="off" required><br /><br />
+
+  <label for="nascimento">Data Nascimento</label>
+  <input type="date" name="nascimento" id="nascimento" required autocomplete="off"><br /><br />
+
+  <label for="salario">Salário:</label>
+  <input type="text" name="salario" id="salario" autocomplete="off" style="text-align: right;"><br /><br />
+
+   <label for="sexo">Sexo:</label>
+   <input type="radio" name="sexo" id="sexo" value="M" checked>Masculino
+   <input type="radio" name="sexo" id="sexo" value="F">Feminino<br /><br />
+
+   <label for="futebol">Time de Futebol:</label>
+      <select name="times">
+      <option value=""></option>
+      <option value="Corinthians">Corinthians</option>
+      <option value="Palmeiras">Palmeiras</option>
+      <option value="Santos">Santos</option>
+      <option value="São Paulo">São Paulo</option>
+    </select><br /><br />
+
+   <label for="planos">Planos:</label>
+   <input type="radio" name="planos" id="planos" value="M" onclick="totaliza();">Mensal - R$ 85,00 
+   <input type="radio" name="planos" id="planos" value="Q" onclick="totaliza();">Quadrimestral - R$ 300,00 
+   <input type="radio" name="planos" id="planos" value="A" onclick="totaliza();">Anual - R$ 600,00<br /><br />
+  
+  Canais Incluídos
+    <div id = "acordeon">
+    <h3>Plano Mensal</h3>
+    <div>
+       <ul>
+            <li>ESPN</li>
+            <li>Fox Sports</li>
+            <li>Sport TV</li>
+       </ul>
+    </div>
+    <h3>Plano Quadrimestral</h3>
+    <div>
+       <ul>
+            <li>ESPN</li>
+            <li>Fox Sports 2</li>
+            <li>Sport TV 2</li>
+       </ul>
+    </div>
+    <h3>Plano Anual</h3>
+    <div>
+       <ul>
+            <li>ESPN 2</li>
+            <li>Fox Sports 2</li>
+            <li>Sport TV 2 e 3</li>
+       </ul>
+    </div>
+ </div><br /><br />
+
+      <label for="premiere">Premiere:</label><br />
+      <input type="radio" name="premiere" id="premiere" 
+      value="E" onclick="totaliza();">Econômico - 12 x R$ 60,00
+      <input type="radio" name="premiere" id="premiere" 
+      value="C" onclick="totaliza();">Controle - Mensal R$ 80,00<br /><br />
+  
+
+      <label for="total">Total (mensal):</label>
+      <input type="text" name="total" id="total" readonly
+      style="text-align: right;"><br /><br />
+      <button type="submit" onclick="activarcaja();"  >Validar Formulário</button>
+     <br /><br />
+     
+     
+    
+     <label for="login">Para assinar,  Informe Login: </label>
+      <input type="text" name="login" id="login"  required 
+      autocomplete="off" placeholder="Login (teste JSON: Usuario)" 
+      maxlength="15" minlength="5" size=22> 
+      <label>Senha:</label>
+      <input type="password" name="senha" id="senha"  required "
+      autocomplete="off" placeholder="Senha (teste JSON: Abc$123)" 
+      maxlength="8" minlength="6" size=22> 
+      <br />
+      <br />
+     
+      <input type="submit" name="butassin" id="butassin" value="Assinar" 
+      disabled onclick="confere_login();"><br /><br />
+      
+ </form>     
+  
+</main>
+
+</footer>
+
+</footer>
+
+</body>
+
+
+</html>

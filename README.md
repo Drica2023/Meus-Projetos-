@@ -3,7 +3,6 @@
 Olá!!!
 # Readme 
 ##### Meu nome é **Adriana Medeiros**, estou participando do Santander Bootcamp 2023 - Backend Java, e estou muito feliz por essa oportunidade de aprendizagem, fornecida em parceira da DIO e o Santander. Estou empolgada por esse jornada, que irá contribuir para minha transição de carreira dentro da área de TI, se tornando desenvolvedora de software Backend - JAVA.
-##### Sou uma Profissional ética, com mais de 20 anos de experiências em Analista de Suporte técnico, responsável e totalmente compromissada com a minha profissão, competente nas atividades exercidas, esforçada e dedicada, facilidade de aprendizado. Servindo o aprimoramento continuo através de leitura e cursos. Tenho uma boa comunicação oral e escrita, excelente relacionamento interpessoal.
 
 
 ## 🛠 Hard Skill

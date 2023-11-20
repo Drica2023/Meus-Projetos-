@@ -1,4 +1,4 @@
-# Algums Outros Meus Projetos 
+# Alguns Outros Projetos 
 
 Em construçao do Readme
 

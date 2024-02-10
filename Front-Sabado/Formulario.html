@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<title>Cadastre-se</title>
+</head>
+<style>
+    .grid-container {
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    background-color: white;
+    padding:10px
+    
+    }
+    
+    .grid-item {
+    background-color: white;
+    border: 5px  white;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(80, 80, 231) ;
+	
+    
+    }
+
+    form{
+	
+	padding: 10px;
+	margin: 5% 35% 5% 20%;
+	text-align: justify;
+	font-family: arial;
+	font-size: 14px;
+	
+
+}
+    </style>
+    <body>
+<div class="grid-item"><img src="./login.png" alt="mão digitando"/>  </div>
+
+<div class="grid-item"> 
+    <h1>Cadastre-se</h1>
+	
+	<form >
+	<input type="hidden" name="id" value=""/>
+	<table>
+	<tr>
+		<td>Nome:</td>
+		<td><input type="text" name="nome" maxlength="80" value="Entre com o Nome completo..." size="80"/></td>
+	</tr>
+
+	<tr>	
+		<td>Email:</td>
+		<td><input type="email" name="Email"  maxlength="80"value="Entre com seu Email..." size="80"/></td>
+	</tr>
+    <tr>	
+		<td>Password:</td>
+		<td><input type="password" name="Password" maxlength="80" value="" size="80"/></td>
+	</tr>
+	
+	
+	<tr>
+		<td colspan="2"><input type="submit" value="Submit"></input></td>
+	</tr>
+	</table>
+	</form> </div>
+	
+</body>
+
+
+</html>
